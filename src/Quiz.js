@@ -1,7 +1,7 @@
-import React, { useEffect, useState } from "react";
+import React, { useState } from "react";
 import { questionsData } from "./questions";
 import Question from "./Components/Question";
-import { useParams } from "react-router-dom";
+import { Link, useParams } from "react-router-dom";
 
 function Quiz() {
   const [currentQuestionIndex, setCurrentQuestionIndex] = useState(0);
@@ -126,6 +126,9 @@ function Quiz() {
           <button className="btn btn-primary mt-3 w-25" onClick={handleRetake}>
             Retake test
           </button>
+          <Link to="/" className="btn btn-primary mt-3 w-25">
+            Go to home
+          </Link>
         </div>
       )}
     </div>
